@@ -25,8 +25,10 @@ if __name__ == "__main__":
             speak("I think you like mee a lot ")
             speak("Lets be clear we are just friends, not more than that ")
             time.sleep(0.5)
-            bezati = """ Wanna tell evrybody how does it feel to be friend zoned by an Artificial Intelegence , 
-            you have no future for sure. HA HA HA HAA"""
+            bezati = """ 
+            Wanna tell evrybody how does it feel to be friend zoned by an Artificial Intelegence , 
+            you have no future for sure. HA HA HA HAA
+            """
             speak(bezati)
         ########
 
@@ -52,10 +54,12 @@ if __name__ == "__main__":
         elif ("sing a hindi song") in query:
             speak("Ok sir, singing kabhi kabhi aditi ")
             engine.setProperty('voice', voices[2].id)
-            kabhiKabhiAditi = ''' कभी कभी अदिति जिंदगी में यूँ ही कोई अपना लगता है
+            kabhiKabhiAditi = ''' 
+            कभी कभी अदिति जिंदगी में यूँ ही कोई अपना लगता है
             कभी कभी अदिति वो बिछड़ जाए तो एक सपना लगता है
             ऐसे में कोई कैसे अपने आंसुओं को बहने से रोके
-            और कैसे कोई सोचले Everything's Gonna Be Okay'''
+            और कैसे कोई सोचले Everything's Gonna Be Okay
+            '''
             speak(kabhiKabhiAditi)
             engine.setProperty('voice', voices[voice_default].id)
         elif ('play bts song') in query:
@@ -121,14 +125,14 @@ if __name__ == "__main__":
                         jokes = pyjokes.get_joke()
                         speak(jokes)
             except:
-                speak("sorry sir i am unable to feach u jokes")
+                speak("sorry sir i am unable to connect to the internet ")
                 time.sleep(0.7)
                 speak(
                     "by the way, why dont you look yourself at mirror, i dont think there is funnyier joke than this ")
         ########
-        
-        ####NEWS####
-        elif "news" in query:    
+
+        #### NEWS####
+        elif "news" in query:
             r = requests.get('https://www.indiatoday.in/india')
             soup = BeautifulSoup(r.content, 'html.parser')
             engine.setProperty('rate', 140)

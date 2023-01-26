@@ -80,7 +80,7 @@ def takeCommand():
         print('\n\b',"User said : ", query,'\n')
 
     except Exception as e:
-        print(e)
+        # print(e)
         speak("I ant here that say that again please")
         print("say that again plz ")
         return "none"
